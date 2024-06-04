@@ -1,43 +1,28 @@
-# TODO List App
+## Todo List App com React e Tailwind CSS
 
-This is a simple TODO list application built with React. The app allows users to add, delete, and mark tasks as complete.
+**Descrição:**
 
-## Features
+Este aplicativo de lista de tarefas é um projeto de demonstração que utiliza React e Tailwind CSS. Ele permite que você crie, edite e exclua tarefas, além de marcá-las como concluídas. O aplicativo é responsivo e funciona em desktops, tablets e smartphones.
 
-- Add new tasks
-- Delete tasks
-- Mark tasks as complete/incomplete
-- Responsive design
+**Tecnologias:**
 
-## Technologies Used
+* React: Uma biblioteca JavaScript para construir interfaces de usuário interativas.
+* Tailwind CSS: Um framework CSS que fornece classes utilitárias para estilizar rapidamente seus elementos HTML.
 
-- React
-- JavaScript
-- CSS - Tailwind css
+**Funcionalidades:**
 
-## Getting Started
+* Criar, editar e excluir tarefas.
+* Marcar tarefas como concluídas.
+* Filtrar tarefas por status (pendente, concluída).
 
-### Prerequisites
+**Como usar:**
 
-- Node.js and npm should be installed on your machine. You can download them from [Node.js official website](https://nodejs.org/).
+1. Clone o repositório para o seu computador.
+2. Instale as dependências com o comando `npm install`.
+3. Inicie o aplicativo com o comando `npm start`.
+4. Acesse o aplicativo em seu navegador em http://localhost:3000.
 
-### Installation
+**Contribuições:**
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/your-username/todo-list-app.git
-    ```
-2. Navigate to the project directory:
-    ```bash
-    cd todo-list-app
-    ```
-3. Install the dependencies:
-    ```bash
-    npm install
-    ```
+Se você encontrar algum problema com o aplicativo ou tiver sugestões de melhorias, sinta-se à vontade para abrir um issue no GitHub.
 
-### Running the Application
-
-To start the application, run:
-```bash
-npm start

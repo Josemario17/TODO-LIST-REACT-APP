@@ -4,7 +4,7 @@ function Task(props){
     const [checked, setChecked] = useState(false)
     function CheckedListAdd(){
         checked ? setChecked(false) : setChecked(true)
-        checked ? checked : props.TaskDone(props.SubKey)
+        checked ? checked : props.TaskDone(props.text)
     }
     return (
         <div className="relative w-full h-12 my-2 bg-gray-300 rounded-sm px-2 flex items-center justify-between">
