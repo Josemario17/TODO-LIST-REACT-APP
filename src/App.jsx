@@ -6,6 +6,7 @@ function App() {
   const [list, setList] = useState([])
   const [doneList, setDoneList] = useState([])
   const [text, setText] = useState('')
+  const [section, setSection] = useState("All")
 
   useEffect(() => {
     const tarefasStorage = localStorage.getItem('list');
@@ -38,6 +39,11 @@ useEffect(() => {
     setDoneList([...doneList, e])
   }
 
+  const PropsTask = {
+      eliminar: handleRemoveTask,
+      TaskDone: TaskDone,
+  }
+
   return (
     <>
     <div className='w-screen h-screen flex items-start pt-32'>
@@ -52,10 +58,15 @@ useEffect(() => {
             <button type='submit' className='text-emerald-300 duration-500 hover:text-emerald-600'>Adicionar</button>
           </form>
 
+          <div className='w-full mt-2 flex items-center justify-start gap-6'>
+            <button onClick={e => setSection("All") } className={`py-2 px-4 ${section == "All" ? 'bg-emerald-600 border-solid border-transparent hover:bg-emerald-100 hover:text-gray-700' : "hover:bg-emerald-600" } rounded-sm duration-200 ease-out`}>Todos</button>
+            <button onClick={e => setSection("Completed")} className={`py-2 px-4 ${section == "Completed" ?  'bg-emerald-600 border-solid border-transparent hover:bg-emerald-100 hover:text-gray-700' : "hover:bg-emerald-600"} rounded-sm duration-200 ease-out`}>Completos</button>
+          </div>
+
           <div className='relative w-full h-auto grid'>
             {
               list.map((item, index) =>(
-                <Task key={index} SubKey={index} text={item} eliminar={handleRemoveTask} TaskDone={TaskDone}></Task>
+                <Task key={index} SubKey={index} text={item} {...PropsTask}></Task>
               ) )
             }
           </div>
